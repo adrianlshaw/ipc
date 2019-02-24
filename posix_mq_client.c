@@ -24,7 +24,10 @@ int main()
         return 2;
     }
 
+    puts ("Sent FOO");
+
     mq_close(handle);
 
+    puts("Exiting");
     return 0;
 }
