@@ -17,3 +17,4 @@ dbus:
 
 clean:
 	rm -f $(POSIX)client $(POSIX)server
+	rm -f dbus-client dbus-server
