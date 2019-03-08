@@ -16,8 +16,8 @@ dbus:
 	cc $(CFLAGS) dbus-server.c -o dbus-server `pkg-config --cflags --libs glib-2.0 dbus-1` -ldbus-1 -lglib-2.0 -ldbus-glib-1
 
 posixshmem:
-	cc $(CFLAGS) posix_shmem_reader.c -o posix_shmem_reader
-	cc $(CFLAGS) posix_shmem_writer.c -o posix_shmem_writer
+	cc $(CFLAGS) shmem_reader.c -o shmem_reader
+	cc $(CFLAGS) shmem_writer.c -o shmem_writer
 
 clean:
 	rm -f $(POSIX)client $(POSIX)server
