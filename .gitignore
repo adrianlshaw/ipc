@@ -50,3 +50,9 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+# Binaries
+posix_mq_client
+posix_mq_server
+posix_shmem_reader
+posix_shmem_writer
