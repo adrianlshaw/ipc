@@ -3,7 +3,7 @@
 #include <string.h>
 #include <sys/types.h>
 #include <mqueue.h>
-
+#include <fcntl.h>
 #include "protocol.h"
 
 int main()

@@ -4,7 +4,7 @@
 #include <sys/types.h>
 #include <errno.h>
 #include <mqueue.h>
-
+#include <fcntl.h>
 #include "protocol.h"
 
 int main()

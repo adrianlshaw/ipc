@@ -20,8 +20,8 @@ shmem:
 	cc $(CFLAGS) shmem_writer.c -o shmem_writer
 
 posixshmem:
-	cc $(CFLAGS) posix_shmem_reader.c -o posix_shmem_reader
-	cc $(CFLAGS) posix_shmem_writer.c -o posix_shmem_writer
+	cc $(CFLAGS) posix_shmem_reader.c -o posix_shmem_reader -lrt
+	cc $(CFLAGS) posix_shmem_writer.c -o posix_shmem_writer -lrt
 
 clean:
 	rm -f $(POSIX)client $(POSIX)server
