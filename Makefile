@@ -2,9 +2,7 @@
 
 CFLAGS ?= -Wall -Wextra -g
 
-help: all
-all:
-	@echo "make (posixmq|posixshmem|dbus|shmem|clean)"
+all: posixmq posixshmem shmem
 
 POSIX := "posix_mq_"
 posixmq:
@@ -14,10 +12,6 @@ posixmq:
 dbus:
 	cc $(CFLAGS) dbus-client.c -o dbus-client `pkg-config --cflags --libs glib-2.0 dbus-1` -ldbus-1 -lglib-2.0 -ldbus-glib-1
 	cc $(CFLAGS) dbus-server.c -o dbus-server `pkg-config --cflags --libs glib-2.0 dbus-1` -ldbus-1 -lglib-2.0 -ldbus-glib-1
-
-shmem:
-	cc $(CFLAGS) shmem_reader.c -o shmem_reader
-	cc $(CFLAGS) shmem_writer.c -o shmem_writer
 
 posixshmem:
 	cc $(CFLAGS) posix_shmem_reader.c -o posix_shmem_reader -lrt
